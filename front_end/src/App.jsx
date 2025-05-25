@@ -36,7 +36,6 @@ function App() {
   // Fetch traffic data for selected month
   useEffect(() => {
     setLoading(true);
-    // fetch(`http://localhost:3000/data_from_local/${yearMonth}`)
     fetch(`${API_BASE}/data_from_local/${yearMonth}`)
       .then(resp => {
         if (!resp.ok) throw new Error('Failed to load traffic data');
